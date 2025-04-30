@@ -5,17 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.email.view.ViewFactory;
 
 public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent parent = FXMLLoader.load(getClass().getResource("/org/example/email/view/MainWindow.fxml"));
-
-        Scene scene = new Scene(parent);
-        stage.setScene(scene);
-
-        stage.show();
+        ViewFactory viewFactory = new ViewFactory(new EmailManager());
+        viewFactory.showLoginWindow();
     }
 
     public static void main(String[] args) {
