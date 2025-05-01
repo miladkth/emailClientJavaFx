@@ -6,14 +6,13 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="477.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Slider fx:id="fontSizePicker" layoutX="129.0" layoutY="140.0" prefHeight="14.0" prefWidth="248.0" />
       <ChoiceBox fx:id="themePicker" layoutX="129.0" layoutY="199.0" prefHeight="26.0" prefWidth="248.0" />
       <Label layoutX="42.0" layoutY="139.0" prefHeight="18.0" prefWidth="66.0" text="Font size" />
       <Label layoutX="42.0" layoutY="203.0" prefHeight="18.0" prefWidth="66.0" text="Color theme" />
-      <Label layoutX="115.0" layoutY="27.0" prefHeight="18.0" prefWidth="258.0" text="Options" />
+      <Label layoutX="115.0" layoutY="27.0" prefHeight="18.0" prefWidth="258.0" styleClass="big" text="Options" />
       <Button layoutX="377.0" layoutY="388.0" mnemonicParsing="false" onAction="#applyBtnAction" text="Apply" />
       <Button layoutX="277.0" layoutY="388.0" mnemonicParsing="false" onAction="#cancelBtnAction" text="Cancel" />
    </children>

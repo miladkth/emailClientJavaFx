@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import org.example.email.EmailManager;
 import org.example.email.view.ColorTheme;
@@ -29,13 +30,16 @@ public class OptionsWindowController extends BaseController implements Initializ
 
     @FXML
     void applyBtnAction() {
-
+        viewFactory.setColorTheme(themePicker.getValue());
+        viewFactory.setFontSize(FontSize.values()[(int)(fontSizePicker.getValue())]);
+        viewFactory.updateStyles();
     }
 
     @FXML
     void cancelBtnAction() {
-
-    }
+        Stage stage = (Stage) fontSizePicker.getScene().getWindow();
+        viewFactory.closeStage(stage);
+     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
