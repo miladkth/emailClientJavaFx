@@ -3,6 +3,8 @@ module org.example.email {
     requires javafx.fxml;
     requires javafx.graphics;
     requires javafx.web;
+    requires java.activation;
+    requires java.mail;
 
 
     opens org.example.email to javafx.fxml;
